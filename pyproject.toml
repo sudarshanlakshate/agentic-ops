@@ -1,0 +1,30 @@
+[project]
+name = "agentic-ops"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sudarshan Lakshate", email = "slakshate@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain>=1.5.2",
+    "langgraph>=1.2.24",
+    "psycopg2-binary>=2.9.13",
+    "redis>=8.1.0",
+]
+
+[project.scripts]
+agentic-ops = "agentic_ops:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
